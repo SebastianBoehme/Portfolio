@@ -58,12 +58,12 @@ section {
       font-size: 18px;
       line-height: 120%;
       
-      display: inline-block;
+      // display: inline-block;
       white-space: nowrap;
       
       &::after {
         content: attr(data-text);
-        position: absolute;
+        position: fixed;
         left: calc(100% + 50%);
         white-space: nowrap;
       }
