@@ -53,7 +53,9 @@
 
   <div class="decoration-hero-right">
 
-    <p class="email-link karla"><a href="'mailto:' + email" class="email-link karla">{{ this.email }}</a></p>
+
+    <a [href]="'mailto:' + email" class="email-link karla">{{ email }}</a>
+
 
     <div class="link-icon-containter">
 

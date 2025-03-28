@@ -10,11 +10,5 @@ import { Component } from '@angular/core';
 export class HeroSectionComponent {
 
   email: string = 'sebastianboehme.dev@gmail.com';
-
-constructor(){
-
-  this.email = 'sebastianboehme.dev@gmail.com';
-}
-  
 }
 
