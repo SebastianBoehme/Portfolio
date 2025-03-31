@@ -19,7 +19,6 @@ section {
 .content-left {
     height: 100%;
     width: 50%;
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -28,11 +27,82 @@ section {
 .content-right {
     height: 100%;
     width: 50%;
-    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 img {
     width: 568px;
     height: 568px;
     border-radius: 30px;
+}
+
+
+
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: rgba(61, 207, 182, 1);
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-block {
+    padding: 32px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 568px;
+    height: 540px;
+    background-color: rgba(61, 207, 182, 0.1);
+    border: 1px solid rgba(61, 207, 182, 1);
+    border-radius: 30px;
+    backdrop-filter: blur(4px);
+    color: rgba(255, 255, 255, 1);
+}
+
+h1 {
+    color: rgba(61, 207, 182, 1);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 3%;
+}
+
+p {
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+
+.information {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.single-info {
+    display: flex;
+    justify-content: flex-start;
+    gap: 24px;
+    color: rgba(255, 255, 255, 0.8);
+
+        &:hover {
+            color: rgba(255, 255, 255, 1);
+        }
+}
+
+.info-icon {
+    width: 32px;
+    height: 32px;
 }
