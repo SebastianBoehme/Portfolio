@@ -26,12 +26,6 @@ a {
 }
 
 .logo {
-    height: 190px;
-    width: 190px;
-    background-image: url(../../assets/img/logo.png);
-
-    &:hover {
-        cursor: pointer;
-        background-image: url(../../assets/img/logo-hover.png);
-    }
-}
+  width: 150px;
+  height: 150px;
+  }
