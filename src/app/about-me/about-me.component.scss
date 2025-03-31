@@ -1,0 +1,38 @@
+section {
+    height: 100svh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(28, 28, 28, 1)
+}
+
+.content-container {
+    width: 1920px;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    padding-left: 96px;
+    padding-right: 96px;
+}
+
+.content-left {
+    height: 100%;
+    width: 50%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.content-right {
+    height: 100%;
+    width: 50%;
+    border: 1px solid blue;
+}
+
+img {
+    width: 568px;
+    height: 568px;
+    border-radius: 30px;
+}
