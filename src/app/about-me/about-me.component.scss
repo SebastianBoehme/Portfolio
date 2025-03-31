@@ -14,13 +14,14 @@ section {
     align-items: center;
     padding-left: 96px;
     padding-right: 96px;
+    gap: 112px;
 }
 
 .content-left {
     height: 100%;
     width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
 }
 
@@ -28,7 +29,7 @@ section {
     height: 100%;
     width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
