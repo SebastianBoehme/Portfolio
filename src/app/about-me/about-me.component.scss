@@ -33,10 +33,17 @@ section {
     align-items: center;
 }
 
-img {
+.profile-picture {
     width: 568px;
     height: 568px;
     border-radius: 30px;
+    z-index: 1;
+}
+
+.profile-shadow {
+    position: relative;
+    left: 525px;
+    margin-top: 45px;
 }
 
 
