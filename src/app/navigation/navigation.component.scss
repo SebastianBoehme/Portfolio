@@ -6,7 +6,11 @@
   align-items: center;
   padding-left: 96px;
   padding-right: 96px;
-  background: linear-gradient(rgba(0, 0, 0, 0) 13.56%, rgba(0, 0, 0, 0.6) 84.01%);
+  background: linear-gradient(
+    rgba(0, 0, 0, 0) 13.56%,
+    rgba(0, 0, 0, 0.6) 84.01%
+  );
+  z-index: 1;
 }
 
 .nav-container {
@@ -29,4 +33,4 @@ a {
 .logo {
   width: 150px;
   height: 150px;
-  }
+}

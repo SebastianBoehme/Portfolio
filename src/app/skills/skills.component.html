@@ -1,10 +1,43 @@
-
-
 <section class="skills-section">
+  <div class="skills-content">
+    <div class="skills-left">
+      <h2 class="karla">Technologien</h2>
+      <div class="skills-box">
+        <h1 class="fira-code">Skill Set</h1>
+        <p class="description karla">
+          Mein Skillset besteht aus HTML, CSS, JavaScript, Angular, Typescript
+          und Material Design. Zudem bin ich mit Tools wie Git, Firebase und
+          RestAPI vertraut. Auch Techniken wie Scrum und dazugehörige Kanbans
+          wie Trello sind mit nicht fremd.
+        </p>
+        <div class="another-skill-container">
+          <div class="another-skill fira-code">
+            <span>Sie suchen</span>
+            <span class="different-color">andere Skills?</span>
+          </div>
+          <p class="karla">
+            Kontaktieren Sie mich gerne. Ich freue mich darauf meine Fähigkeiten
+            zu erweitern.
+          </p>
+        </div>
 
-    <!-- @for (skill of skills; track $index) { 
-        <div class="single-skill">
-            <img src="{{skill.icon}}" alt="">
-            <p> {{ skill.name }} </p>
-        </div> } -->
+        <div class="lets-talk-button">
+          <span class="animated-text karla" data-text="Let's Talk"
+            >Let's Talk</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-right">
+      <div class="skills">
+        @for (skill of skills; track $index) {
+        <div id="{{ $index }}" class="single-skill">
+          <img src="{{ skill.icon }}" alt="" />
+          <p class="fira-code">{{ skill.name }}</p>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
 </section>

@@ -10,7 +10,7 @@ section {
 }
 
 .headline-container {
-    max-width: 1920px;
+    max-width: 1440px;
     color: rgba(217, 217, 217, 1);
     display: flex;
     flex-direction: column;
@@ -26,7 +26,7 @@ section {
 }
 
 .button-container {
-    max-width: 1920px;
+    max-width: 1440px;
     padding-top: 40px;
     width: 50%;
     display: flex;
@@ -135,7 +135,9 @@ section {
 }
 
 .decoration-container {
-  max-width: 1920px;
+  // padding-left: 96px;
+  // padding-right: 96px;
+  max-width: 1400px;
   width: 100%;
   height: auto;
   display: flex;
@@ -151,7 +153,7 @@ section {
   flex-direction: column;
   height: 312px;
   gap: 24px;
-  padding-left: 96px;
+  // padding-left: 96px;
   left: 0;
 }
 
@@ -162,7 +164,7 @@ section {
   height: auto;
   max-width: 40px;
   gap: 24px;
-  padding-right: 96px;
+  // padding-right: 96px;
   left: 0;
 }
 

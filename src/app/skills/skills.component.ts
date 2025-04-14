@@ -42,7 +42,7 @@ export class SkillsComponent {
       name: 'GIT'
     },
     {
-      icon: '../../assets/img/skills-icons/rest-api--icon.svg',
+      icon: '../../assets/img/skills-icons/rest-api-icon.svg',
       name: 'Rest API'
     },
     {
