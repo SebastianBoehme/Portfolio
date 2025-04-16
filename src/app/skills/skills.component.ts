@@ -51,7 +51,7 @@ export class SkillsComponent {
     },
     {
       icon: '../../assets/img/skills-icons/groth-mindset.svg',
-      name: 'Groth Mindset'
+      name: 'Growth Mindset'
     }
   ];
 
