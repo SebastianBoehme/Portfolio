@@ -153,13 +153,19 @@ p {
   width: 15%;
   height: fit-content;
   align-items: center;
+
   img {
     width: 60px;
     height: 60px;
-    &:hover {
-      transform: scale(1.2);
-    }
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8; // leicht transparent als Ausgangszustand
   }
+
+  &:hover img {
+    transform: scale(1.2);
+    opacity: 1; // wird beim Hover vollständig sichtbar
+  }
+
   p {
     font-size: 18px;
     font-weight: 400;
@@ -168,3 +174,83 @@ p {
     text-align: center;
   }
 }
+
+.tooltip {
+  position: relative;
+  bottom: 140px;
+  left: 170px;
+  padding: 16px;
+  width: 188px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 3s ease, visibility 3s ease;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .learn-skills {
+    gap: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    font-size: 16px;
+    color: rgba(61, 207, 182, 1);
+  }
+
+  .learn-icon {
+    height: 32px;
+    width: 32px;
+  }
+
+  .single-skill-to-learn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// .tooltip {
+//   position: relative;
+//   bottom: 140px;
+//   left: 170px;
+//   padding: 16px;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 8px;
+//   width: 188px;
+//   height: fit-content;
+//   background-color: rgba(255, 255, 255, 1);
+//   border-radius: 16px;
+//     .learn-skills {
+//       gap: 16px;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//     }
+//     p {
+//       font-size: 16px;
+//       color: rgba(61, 207, 182, 1);
+//     }
+//     .learn-icon {
+//       height: 32px;
+//       width: 32px;
+//     }
+//     .single-skill-to-learn {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//     }
+// }
+
+ #skill-10:hover {
+  p {
+    color: rgba(61, 207, 182, 1);
+  }
+ }

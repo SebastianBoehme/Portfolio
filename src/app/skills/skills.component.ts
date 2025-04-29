@@ -55,5 +55,18 @@ export class SkillsComponent {
     }
   ];
 
+  
+
+  showTooltip = false;
+
+  onHover(index: number) {
+    if (index === this.skills.length - 1) {
+      this.showTooltip = true;
+    }
+  }
+
+  onLeave() {
+    this.showTooltip = false;
+  }
 
 }
