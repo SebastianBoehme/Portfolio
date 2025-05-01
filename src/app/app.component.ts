@@ -5,12 +5,13 @@ import { HeroSectionComponent } from '../app/hero-section/hero-section.component
 import { NavigationComponent } from '../app/navigation/navigation.component';
 import { AboutMeComponent } from "../app/about-me/about-me.component";
 import { SkillsComponent } from "./skills/skills.component";
+import { ProjectsComponent } from "./projects/projects.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeroSectionComponent, NavigationComponent, AboutMeComponent, SkillsComponent],
+  imports: [CommonModule, RouterOutlet, HeroSectionComponent, NavigationComponent, AboutMeComponent, SkillsComponent, ProjectsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
