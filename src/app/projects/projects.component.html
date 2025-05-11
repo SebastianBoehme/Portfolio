@@ -5,4 +5,10 @@
         <h1 class="fira-code">Meine Projekte</h1>
     </div>
     </div>
+
+    <div class="content">
+        @for (project of projects; track $index) {
+            {{project.name}}
+        }
+    </div>
 </section>
