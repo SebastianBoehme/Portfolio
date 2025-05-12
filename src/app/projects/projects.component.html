@@ -1,14 +1,38 @@
 <section class="projects">
-    <div class="projects-content">
-        <div class="projects-headline-container">
-        <h2 class="karla">Portfolio</h2>
-        <h1 class="fira-code">Meine Projekte</h1>
-    </div>
+  <div class="projects-content">
+    <div class="projects-headline-container">
+      <h2 class="karla">Portfolio</h2>
+      <h1 class="fira-code">Meine Projekte</h1>
+      <div class="description-container">
+        <p class="karla">
+          Sehen Sie sich eine Auswahl meiner Arbeit an - interagieren Sie <br />
+          mit Projekten um meine Fähigkeiten in Aktion zu sehen.
+        </p>
+      </div>
     </div>
 
-    <div class="content">
-        @for (project of projects; track $index) {
-            {{project.name}}
+    <div class="projects-container">
+      @for (project of projects; track $index) {
+      <div class="single-project">
+        @if ($first) {
+        <div class="spacer"></div>
         }
+
+        <div class="single-project-content">
+          <b class="fira-code">{{ project.name }}</b>
+
+          <div class="project-skills">
+            @for (tool of project.tools; track tool.name) {
+            <p class="karla">{{ tool.name }}</p>
+            @if (! $last) {
+            <div class="skill-spacer"></div>
+            } }
+          </div>
+        </div>
+
+        <div class="spacer"></div>
+      </div>
+      }
     </div>
+  </div>
 </section>
