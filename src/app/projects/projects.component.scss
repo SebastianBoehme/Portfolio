@@ -101,3 +101,24 @@ section {
       }
   }
  
+  .project-image-tooltip {
+  position: fixed;
+  top: 120px;
+  right: 40px;
+  width: 320px;
+  max-height: 70vh;
+  z-index: 1000;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* kein blockieren der Maus-Events */
+}
+
+.project-image-tooltip img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}

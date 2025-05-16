@@ -24,7 +24,9 @@ interface Project {
 })
 export class ProjectsComponent {
 
-  
+  hoveredProject: Project | null = null;
+
+
   projects: Project[] = [
     {
       number: '01',
@@ -37,7 +39,7 @@ export class ProjectsComponent {
         { name: 'Firebase', icon: '' }
       ],
       short: 'JS',
-      image: '',
+      image: '../../assets/img/projects-icons/join-image.png',
       link: ''
     },
     {
@@ -50,7 +52,7 @@ export class ProjectsComponent {
         { name: 'JavaScript', icon: 'assets/icons/typescript.svg' },
       ],
       short: 'JS',
-      image: '',
+      image: '../../assets/img/projects-icons/el-pollo-loco-image.png',
       link: ''
     }
   ];

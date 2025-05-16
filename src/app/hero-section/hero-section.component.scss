@@ -90,7 +90,7 @@ section {
   bottom: 5%;
   overflow: hidden;
   transform: rotate(-3deg);
-  z-index: 1;
+  z-index: 3;
 }
 
 .spaceholder {
@@ -199,12 +199,14 @@ section {
   bottom: 0;
   width: 1px;
   border: 1px solid rgba(61, 207, 182, 1);
+  z-index: 1;
 }
 
 .decoration-line-right {
   height: 186px;
   width: 1px;
   border: 1px solid rgba(255, 255, 255, 1);
+  z-index: 1;
 }
 
 .linkedin-icon {
