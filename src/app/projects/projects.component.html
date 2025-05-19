@@ -11,65 +11,50 @@
       </div>
     </div>
 
-    <!-- <div class="projects-container">
-      @for (project of projects; track $index) {
-      <div class="single-project">
-        @if ($first) {
-        <div class="spacer"></div>
-        }
-
-        <div class="single-project-content">
-          <b class="fira-code">{{ project.name }}</b>
-
-          <div class="project-skills">
-            @for (tool of project.tools; track tool.name) {
-            <p class="karla">{{ tool.name }}</p>
-            @if (! $last) {
-            <div class="skill-spacer"></div>
-            } }
-          </div>
-        </div>
-
-        <div class="spacer"></div>
-      </div>
-      }
-    </div> -->
-
-    <!-- Bildanzeige rechts -->
-@if (hoveredProject) {
-  <div class="project-image-tooltip">
-    <img [src]="hoveredProject.image" [alt]="hoveredProject.name" />
-  </div>
-}
-
-<div class="projects-container">
-  @for (project of projects; track $index) {
-    <div class="single-project"
-         (mouseenter)="hoveredProject = project"
-         (mouseleave)="hoveredProject = null">
-
-      @if ($first) {
-        <div class="spacer"></div>
-      }
-
-      <div class="single-project-content">
-        <b class="fira-code">{{ project.name }}</b>
-
-        <div class="project-skills">
-          @for (tool of project.tools; track tool.name) {
-            <p class="karla">{{ tool.name }}</p>
-            @if (! $last) {
-              <div class="skill-spacer"></div>
-            }
+    <div class="projects-container">
+      <div class="projects-left">
+        @for (project of projects; track $index) {
+        <div
+          class="single-project"
+          (mouseenter)="hoveredProject = project; hoveredIndex = $index"
+          (mouseleave)="hoveredProject = null"
+        >
+          @if ($first) {
+          <div class="spacer"></div>
           }
+
+          <div class="single-project-content">
+            <b class="fira-code">{{ project.name }}</b>
+
+            <div class="project-skills">
+              @for (tool of project.tools; track tool.name) {
+              <p class="karla">{{ tool.name }}</p>
+              @if (! $last) {
+              <div class="skill-spacer"></div>
+              } }
+            </div>
+          </div>
+
+          <div class="spacer"></div>
         </div>
+        }
       </div>
 
-      <div class="spacer"></div>
+      <div class="projects-right">
+        @if (hoveredProject) { @switch (hoveredIndex) { @case (0) {
+        <div class="project-image-tooltip align-start">
+          <img [src]="hoveredProject.image" [alt]="hoveredProject.name" />
+        </div>
+        } @case (projects.length - 1) {
+        <div class="project-image-tooltip align-end">
+          <img [src]="hoveredProject.image" [alt]="hoveredProject.name" />
+        </div>
+        } @default {
+        <div class="project-image-tooltip align-center">
+          <img [src]="hoveredProject.image" [alt]="hoveredProject.name" />
+        </div>
+        } } }
+      </div>
     </div>
-  }
-</div>
-
-
   </div>
 </section>

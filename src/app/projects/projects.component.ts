@@ -25,6 +25,7 @@ interface Project {
 export class ProjectsComponent {
 
   hoveredProject: Project | null = null;
+  hoveredIndex: number = -1;
 
 
   projects: Project[] = [
