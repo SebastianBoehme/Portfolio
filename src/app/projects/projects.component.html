@@ -16,6 +16,7 @@
         @for (project of projects; track $index) {
         <div
           class="single-project"
+          (click)="openOverlay(project)"
           (mouseenter)="hoveredProject = project; hoveredIndex = $index"
           (mouseleave)="hoveredProject = null"
         >
@@ -57,4 +58,38 @@
       </div>
     </div>
   </div>
+
+<!-- Overlay -->
+  
+  <!--@if (selectedProject) {
+  <div class="overlay" (click)="closeOverlay()">
+    <div class="overlay-content" (click)="$event.stopPropagation()">
+      <button class="close-btn" (click)="closeOverlay()">✖</button>
+
+      <h1> {{selectedProject.number}} </h1>
+      <h2>{{ selectedProject.name }}</h2>
+      <p class="description">{{ selectedProject.description }}</p>
+
+      <div class="overlay-tools">
+        @for (tool of selectedProject.tools; track tool.name) {
+          <div class="tool">
+            @if (tool.icon) {
+              <img [src]="tool.icon" [alt]="" />
+            }
+            <span>{{ tool.name }}</span>
+          </div>
+        }
+      </div>
+
+      <img class="preview-image" [src]="selectedProject.image" [alt]="selectedProject.name" />
+
+    
+        <a class="overlay-link" [href]="selectedProject.link" target="_blank">Live-Demo öffnen</a>
+      
+    </div>
+  </div>
+}-->
+
+
+
 </section>

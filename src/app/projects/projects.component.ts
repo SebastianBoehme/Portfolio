@@ -26,6 +26,17 @@ export class ProjectsComponent {
 
   hoveredProject: Project | null = null;
   hoveredIndex: number = -1;
+  selectedProject: Project | null = null;
+
+openOverlay(project: Project) {
+  this.selectedProject = project;
+  document.body.style.overflow = 'hidden';
+}
+
+closeOverlay() {
+  this.selectedProject = null;
+  document.body.style.overflow = '';
+}
 
 
   projects: Project[] = [
