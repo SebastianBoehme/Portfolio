@@ -43,15 +43,15 @@
       <div class="projects-right">
         @if (hoveredProject) { @switch (hoveredIndex) { @case (0) {
         <div class="project-image-tooltip align-start">
-          <img [src]="hoveredProject.image" [alt]="hoveredProject.name" />
+          <img class="project-img" [src]="hoveredProject.image" [alt]="hoveredProject.name" /> <img src="../../assets/img/projects-icons/project-img-shadow.svg" alt="" class="img-shadow">
         </div>
         } @case (projects.length - 1) {
         <div class="project-image-tooltip align-end">
-          <img [src]="hoveredProject.image" [alt]="hoveredProject.name" />
+          <img class="project-img" [src]="hoveredProject.image" [alt]="hoveredProject.name" /> <img src="../../assets/img/projects-icons/project-img-shadow.svg" alt="" class="img-shadow">
         </div>
         } @default {
         <div class="project-image-tooltip align-center">
-          <img [src]="hoveredProject.image" [alt]="hoveredProject.name" />
+          <img class="project-img" [src]="hoveredProject.image" [alt]="hoveredProject.name" /> <img src="../../assets/img/projects-icons/project-img-shadow.svg" alt="" class="img-shadow">
         </div>
         } } }
       </div>
