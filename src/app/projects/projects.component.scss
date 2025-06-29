@@ -170,19 +170,23 @@ section {
   overflow-y: auto;
 
   .overlay-content {
+    padding: 32px;
     max-width: 1440px;
     width: 50%;
     height: 50%;
     border-radius: 16px;
     background: linear-gradient(55.22deg, #1c1c1c 36.26%, #08463b 93.28%);
+    display: flex;
   }
 }
 
-.close-btn-container {
-  padding: 32px;
+.overlay-right {
   display: flex;
-  justify-content: end;
-  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+  width: 50%;
+  gap: 60px;
 }
 
 .close {
@@ -197,6 +201,74 @@ section {
     transform: scale(1.4);
    }
 }
+
+.project-information {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: fit-content;
+  gap: 40px;
+  margin: 0;
+}
+
+  .number-and-name-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+    h1 {
+      color: rgba(61, 207, 182, 1);
+      font-size: 128px;
+      margin: 0;
+    }
+    h2 {
+      font-size: 64px;
+      color: rgba(255, 255, 255, 1);
+      margin: 0;
+    }
+  }
+
+  .project-description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+    h3 {
+      font-size: 24px;
+      color: rgba(61, 207, 182, 1);
+      margin: 0;
+    }
+    p {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  .overlay-tools {
+    display: flex;
+    gap: 16px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .tool {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+
+      .tool-icon {
+        height: 24px;
+        width: 20px;
+      }
+  }
+
+  .preview-image {
+    width: 520px;
+    height: 370px;
+    border-radius: 30px;
+  }
+
 
 
 
