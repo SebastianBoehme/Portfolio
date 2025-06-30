@@ -162,7 +162,8 @@ section {
   inset: 0;
   width: 100%;
   height: 100svh;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.559);
+  backdrop-filter: blur(2px);
   z-index: 1000;
   display: flex;
   justify-content: center;

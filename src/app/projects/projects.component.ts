@@ -13,6 +13,7 @@ interface Project {
   short: string;
   image: string;
   link: string;
+  git: string;
 }
 
 @Component({
@@ -52,7 +53,8 @@ closeOverlay() {
       ],
       short: 'JS',
       image: '../../assets/img/projects-icons/join-image.png',
-      link: ''
+      link: '',
+      git: 'https://github.com/Pe3et/Join'
     },
     {
       number: '02',
@@ -65,7 +67,8 @@ closeOverlay() {
       ],
       short: 'JS',
       image: '../../assets/img/projects-icons/el-pollo-loco-image.png',
-      link: ''
+      link: '',
+      git: 'https://github.com/SebastianBoehme/Pollo-Loco'
     }
   ];
 
