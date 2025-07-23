@@ -91,12 +91,10 @@
   @if (selectedProject) {
   <div class="overlay" (click)="closeOverlay()">
     <div class="overlay-content" (click)="$event.stopPropagation()">
-      
-
       <div class="project-information">
         <div class="number-and-name-container">
-          <h1 class="karla"> {{selectedProject.number}} </h1>
-          <h2 class="fira-code"> {{selectedProject.name}} </h2>
+          <h1 class="karla">{{ selectedProject.number }}</h1>
+          <h2 class="fira-code">{{ selectedProject.name }}</h2>
         </div>
 
         <div class="project-description-container">
@@ -105,24 +103,41 @@
         </div>
 
         <div class="overlay-tools">
-        @for (tool of selectedProject.tools; track tool.name) {
+          @for (tool of selectedProject.tools; track tool.name) {
           <div class="tool">
             @if (tool.icon) {
-              <img class="tool-icon" [src]="tool.icon" [alt]="" />
+            <img class="tool-icon" [src]="tool.icon" [alt]="" />
             }
             <span class="karla">{{ tool.name }}</span>
           </div>
-        }
-      </div>
+          }
+        </div>
 
-      
+        <div class="link-btns-container">
+          <a
+            [href]="selectedProject.git"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="link-btns"><p class="karla">Github</p> <img class="link-arrow" src="../../assets/img/projects-icons/arrow-green.svg" alt="Pfeil"> </div>
+          </a>
 
+            <a
+            [href]="selectedProject.link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="link-btns"><p class="karla">Live Test</p> <img class="link-arrow" src="../../assets/img/projects-icons/arrow-green.svg" alt="Pfeil"> </div>
+          </a>
+
+        </div>
+        
       </div>
 
       <div class="overlay-right">
         <svg
-        (click)="closeOverlay()"
-        class="close"
+          (click)="closeOverlay()"
+          class="close"
           width="18"
           height="18"
           viewBox="0 0 18 18"
@@ -135,15 +150,13 @@
           />
         </svg>
 
-        
-          <img class="preview-image" src="{{ selectedProject.image }}" alt="Vorschaubild des Projekts">
-        
-
+        <img
+          class="preview-image"
+          src="{{ selectedProject.image }}"
+          alt="Vorschaubild des Projekts"
+        />
       </div>
-
     </div>
-
-    
   </div>
   }
 
