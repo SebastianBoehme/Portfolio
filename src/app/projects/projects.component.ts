@@ -39,6 +39,20 @@ closeOverlay() {
   document.body.style.overflow = '';
 }
 
+showNextProject(event: Event): void {
+  event.stopPropagation();
+
+  if (!this.selectedProject) return;
+
+  const currentIndex = this.projects.findIndex(
+    (proj) => proj.name === this.selectedProject!.name
+  );
+
+  const nextIndex = (currentIndex + 1) % this.projects.length;
+  this.selectedProject = this.projects[nextIndex];
+}
+
+
 
   projects: Project[] = [
     {
