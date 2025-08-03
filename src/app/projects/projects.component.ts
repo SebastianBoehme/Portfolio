@@ -29,6 +29,7 @@ export class ProjectsComponent {
   hoveredIndex: number = -1;
   selectedProject: Project | null = null;
 
+
 openOverlay(project: Project) {
   this.selectedProject = project;
   document.body.style.overflow = 'hidden';
@@ -45,14 +46,12 @@ showNextProject(event: Event): void {
   if (!this.selectedProject) return;
 
   const currentIndex = this.projects.findIndex(
-    (proj) => proj.name === this.selectedProject!.name
+    (project) => project.name === this.selectedProject!.name
   );
 
   const nextIndex = (currentIndex + 1) % this.projects.length;
   this.selectedProject = this.projects[nextIndex];
 }
-
-
 
   projects: Project[] = [
     {
